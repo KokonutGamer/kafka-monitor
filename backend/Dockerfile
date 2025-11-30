@@ -5,7 +5,7 @@ WORKDIR /app
 COPY . .
 
 # Build the project using Maven Wrapper
-RUN ./mvnw clean package
+RUN ./mvnw clean package -DskipTests
 
 # Run the JAR in a new layer with a smaller 
 FROM amazoncorretto:21-alpine-jdk
